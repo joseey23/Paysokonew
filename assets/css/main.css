@@ -1491,7 +1491,10 @@ section,
 
 .portfolio .portfolio-filters li:hover,
 .portfolio .portfolio-filters li.filter-active {
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
   color: var(--accent-color);
+  padding: 12px;
+  border-radius: 50px;
 }
 
 .portfolio .portfolio-filters li:first-child {
