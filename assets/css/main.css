@@ -1487,6 +1487,9 @@ section,
   line-height: 1;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
+  border: 1px solid var(--accent-color);
+  padding: 10px;
+  border-radius: 50px;
 }
 
 .portfolio .portfolio-filters li:hover,
