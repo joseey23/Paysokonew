@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investors & Philanthropists - PaySoko</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <style>
+      :root {
+        --paysoko-primary: #5c6ff4;
+        --paysoko-secondary: #fc6668;
+        --paysoko-accent: #fc6668;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+      }
+
+      .navbar {
+        background-color: white;
+        padding: 0.8rem 1rem;
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+        color: white !important;
+      }
+
+      .navbar-nav .nav-link {
+        color: rgba(255, 255, 255, 0.85) !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: white !important;
+      }
+
+      .btn-request {
+        background-color: var(--paysoko-accent);
+        border: none;
+        color: white;
+        font-weight: 600;
+        padding: 0.5rem 1.5rem;
+        border-radius: 4px;
+        transition: all 0.3s;
+      }
+
+      .btn-request:hover {
+        background-color: #e67e22;
+        transform: translateY(-2px);
+      }
+
+      .hero-section {
+        background: linear-gradient(
+            rgba(44, 62, 80, 0.9),
+            rgba(44, 62, 80, 0.8)
+          ),
+          url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 6rem 0;
+        margin-bottom: 4rem;
+      }
+
+      .content-section {
+        padding: 3rem 0;
+      }
+
+      .content-img {
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .content-img:hover {
+        transform: translateY(-5px);
+      }
+
+      .content-text p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        color: #444;
+      }
+
+      .logo img {
+        max-height: 36px;
+        margin-right: 8px;
+      }
+
+      .highlight {
+        background-color: rgba(52, 156, 219, 0.1);
+        border-left: 4px solid var(--paysoko-secondary);
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 0 4px 4px 0;
+      }
+
+      .cta-section {
+        background-color: #f8f9fa;
+        padding: 4rem 0;
+        margin-top: 3rem;
+      }
+
+      footer {
+        background-color: var(--paysoko-primary);
+        color: white;
+        padding: 2rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img loading="lazy" src="assets/img/paysokonewlogo.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item ms-2">
+              <a href="demo.html" class="btn btn-request">Request Demo</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="investors">
+      <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-4">For Investors & Philanthropists</h1>
+        <p class="lead mx-auto" style="max-width: 700px">
+          Transform how you deploy capital, manage risk, and realize measurable
+          outcomes with PaySoko's intelligent financier module
+        </p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 content-text">
+            <p>
+              PaySoko’s financier module is built to transform how investors and
+              philanthropic organizations deploy capital, manage risk, and
+              realize measurable outcomes. At the heart of the solution is our
+              AI engine, Uliza, which brings predictive intelligence, real-time
+              monitoring, and advanced automation to every stage of the
+              investment lifecycle.
+            </p>
+
+            <div class="highlight">
+              <h4>
+                <i class="bi bi-lightbulb-fill me-2"></i>Intelligent Capital
+                Deployment
+              </h4>
+              <p class="mb-0">
+                By combining Uliza’s capabilities with PaySoko’s tightly
+                integrated ecosystem, financiers gain an accelerated, de-risked
+                path to value creation.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Investment analytics dashboard"
+              class="img-fluid content-img"
+            />
+          </div>
+        </div>
+
+        <div class="row align-items-center mt-5">
+          <div class="col-lg-6 order-lg-2 content-text">
+            <p>
+              For investors seeking strong, derisked, and accelerated ROI, the
+              module offers a capital deployment and value realization modeler
+              that continuously learns from market signals, borrower
+              performance, and portfolio data.
+            </p>
+            <p>
+              Uliza automates much of the heavy analytical lift modeling risk,
+              optimizing allocations, and generating foresight that previously
+              required teams of consultants and analysts.
+            </p>
+          </div>
+          <div class="col-lg-6 order-lg-1 mb-4 mb-lg-0">
+            <img
+              src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Data visualization"
+              class="img-fluid content-img"
+            />
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-12">
+            <p>
+              The platform’s ability to syndicate investments further amplifies
+              opportunity. With a few clicks, investors can form private
+              investment groups or open their syndicates to public
+              participation, scaling capital access and broadening
+              diversification options.
+            </p>
+            <p>
+              For philanthropic organizations, the module provides impact
+              transparency with financial discipline. Uliza translates complex
+              community impact metrics into clear, verifiable reports, allowing
+              mission-driven funders to see exactly how their capital is
+              advancing social good.
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h3 class="card-title h4">
+                  <i class="bi bi-graph-up me-2"></i>Investment Syndication
+                </h3>
+                <p class="card-text">
+                  Form private investment groups or open syndicates to public
+                  participation, with seamless compliance and performance
+                  tracking handled by Uliza's automation.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h3 class="card-title h4">
+                  <i class="bi bi-heart-fill me-2"></i>Impact Transparency
+                </h3>
+                <p class="card-text">
+                  Translate complex community impact metrics into clear,
+                  verifiable reports, eliminating the need for external
+                  consultants to evaluate outcomes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-12">
+            <p>
+              Most importantly, PaySoko’s ecosystem eliminates the need for
+              scattered data collection through surveys, ad hoc report requests,
+              or specialized consulting engagements. By integrating data
+              directly into one intelligent platform, Uliza streamlines
+              awareness, strengthens proactive risk management, and accelerates
+              time-to-value.
+            </p>
+            <p>
+              With PaySoko and Uliza, financiers and philanthropists alike gain
+              the confidence of a platform that not only secures and grows
+              capital, but also ensures it delivers enduring impact where it
+              matters most.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <div class="container text-center">
+        <h2 class="mb-4">Ready to transform your investment strategy?</h2>
+        <p class="lead mb-4">
+          See how PaySoko's financier module can accelerate your ROI and impact
+        </p>
+        <a href="demo.html" class="btn btn-primary btn-lg px-4 py-2">
+          Request a Demo <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 PaySoko. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

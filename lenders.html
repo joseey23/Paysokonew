@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenders & Buyers - PaySoko</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <style>
+      :root {
+        --paysoko-primary: #5c6ff4;
+        --paysoko-secondary: #fc6668;
+        --paysoko-accent: #9b59b6;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+      }
+
+      .navbar {
+        background-color: white;
+        padding: 0.8rem 1rem;
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+        color: white !important;
+      }
+
+      .navbar-nav .nav-link {
+        color: rgba(255, 255, 255, 0.85) !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: white !important;
+      }
+
+      .btn-request {
+        background-color: var(--paysoko-accent);
+        border: none;
+        color: white;
+        font-weight: 600;
+        padding: 0.5rem 1.5rem;
+        border-radius: 4px;
+        transition: all 0.3s;
+      }
+
+      .btn-request:hover {
+        background-color: #8e44ad;
+        transform: translateY(-2px);
+      }
+
+      .hero-section {
+        background: linear-gradient(
+            rgba(44, 62, 80, 0.9),
+            rgba(44, 62, 80, 0.8)
+          ),
+          url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 6rem 0;
+        margin-bottom: 4rem;
+      }
+
+      .content-section {
+        padding: 3rem 0;
+      }
+
+      .content-img {
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .content-img:hover {
+        transform: translateY(-5px);
+      }
+
+      .filter-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 40px;
+      }
+
+      .filter-btn {
+        background-color: white;
+        border: 2px solid var(--paysoko-secondary);
+        color: var(--paysoko-primary);
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background-color: var(--paysoko-secondary);
+        color: white;
+      }
+
+      .portfolio-item {
+        margin-bottom: 40px;
+        display: none;
+      }
+
+      .portfolio-item.active {
+        display: flex;
+      }
+
+      .portfolio-content {
+        padding: 30px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        height: 100%;
+      }
+
+      .portfolio-content h4 {
+        color: var(--paysoko-primary);
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .cta-section {
+        background-color: #f8f9fa;
+        padding: 4rem 0;
+        margin-top: 3rem;
+      }
+
+      footer {
+        background-color: var(--paysoko-primary);
+        color: white;
+        padding: 2rem 0;
+      }
+
+      .logo img {
+        max-height: 36px;
+        margin-right: 8px;
+      }
+
+      @media (max-width: 992px) {
+        .portfolio-item .row {
+          flex-direction: column-reverse;
+        }
+
+        .portfolio-item .col-lg-6 {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img loading="lazy" src="assets/img/paysokonewlogo.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item ms-2">
+              <a href="demo.html" class="btn btn-request">Request Demo</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="financial">
+      <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-4">Lenders & Buyers</h1>
+        <p class="lead mx-auto" style="max-width: 700px">
+          Hyper-optimize your lending process with our proprietary HI-VE AI
+          models, reducing costs and risks while accelerating revenue and ROI
+        </p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+      <div class="container">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">
+            All Solutions
+          </button>
+          <button class="filter-btn" data-filter="uliza">Uliza AI</button>
+          <button class="filter-btn" data-filter="servicing">
+            Automated Loan Servicing
+          </button>
+          <button class="filter-btn" data-filter="analysis">
+            Financial Analysis & Spreads
+          </button>
+          <button class="filter-btn" data-filter="origination">
+            Origination
+          </button>
+          <button class="filter-btn" data-filter="erp">
+            Multi-Industry ERP
+          </button>
+        </div>
+
+        <div class="portfolio-items">
+          <!-- Uliza AI -->
+          <div class="portfolio-item active" data-category="uliza">
+            <div class="row">
+              <div class="col-lg-6 d-flex flex-column justify-content-center">
+                <div class="portfolio-content">
+                  <h4>
+                    De-risk your investments with real-time insights into
+                    business health and performance. Measure the impact of
+                    financing, automate loan management, and cut down the
+                    workload of originating, underwriting, and servicing loans
+                    making lending smarter, faster, and more sustainable.
+                  </h4>
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center">
+                <img
+                  loading="lazy"
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  class="img-fluid content-img"
+                  alt="Dashboard Analytics"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Automated Loan Servicing -->
+          <div class="portfolio-item active" data-category="servicing">
+            <div class="row">
+              <div class="col-lg-6 d-flex flex-column justify-content-center">
+                <div class="portfolio-content">
+                  <h4>
+                    Automated loan servicing with embedded finance simplifies
+                    lending from start to finish — streamline approvals, track
+                    repayments, and manage loans effortlessly, all while
+                    reducing risk and operational workload.
+                  </h4>
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center">
+                <img
+                  loading="lazy"
+                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  class="img-fluid content-img"
+                  alt="Loan Servicing"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Financial Analysis & Spreads -->
+          <div class="portfolio-item active" data-category="analysis">
+            <div class="row">
+              <div class="col-lg-6 d-flex flex-column justify-content-center">
+                <div class="portfolio-content">
+                  <h4>
+                    AI-powered financial analysis reads and interprets documents
+                    instantly, generating accurate spreads and insights to
+                    assess business health, risk, and performance — faster and
+                    smarter than ever.
+                  </h4>
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center">
+                <img
+                  loading="lazy"
+                  src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  class="img-fluid content-img"
+                  alt="Financial Analysis"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Origination -->
+          <div class="portfolio-item active" data-category="origination">
+            <div class="row">
+              <div class="col-lg-6 d-flex flex-column justify-content-center">
+                <div class="portfolio-content">
+                  <h4>
+                    Streamline origination and underwriting with intelligent
+                    automation — assess applications, analyze risk, and approve
+                    loans faster, with greater accuracy and confidence.
+                  </h4>
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center">
+                <img
+                  loading="lazy"
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  class="img-fluid content-img"
+                  alt="Origination Process"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Multi-Industry ERP -->
+          <div class="portfolio-item active" data-category="erp">
+            <div class="row">
+              <div class="col-lg-6 d-flex flex-column justify-content-center">
+                <div class="portfolio-content">
+                  <h4>
+                    PaySoko's ERP unifies operations and capital management with
+                    real-time transparency and control. From Financial
+                    Institutions and Construction to SMBs, Retail, Hospitality,
+                    NGOs, Manufacturing, and Infrastructure, organizations gain
+                    streamlined operations, accountable fund flows, and
+                    data-driven decisions—all in one lightweight, scalable
+                    system.
+                  </h4>
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center">
+                <img
+                  loading="lazy"
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  class="img-fluid content-img"
+                  alt="Multi-Industry ERP"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Info Section -->
+    <section class="bg-light py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <h2 class="mb-4">How HI-VE AI Transforms Lending</h2>
+            <p class="lead">
+              Using our proprietary HI-VE AI models we provide solutions that
+              hyper-optimize the lending process for banks, credit unions,
+              CDFIs, fintech lenders and next-generation reducing costs and
+              risks, while accelerating revenue and ROI.
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <i class="bi bi-graph-down text-danger fs-1 mb-3"></i>
+                <h4 class="card-title">Reduce Costs</h4>
+                <p class="card-text">
+                  Cut operational expenses by automating manual processes and
+                  reducing errors.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <i class="bi bi-shield-check text-success fs-1 mb-3"></i>
+                <h4 class="card-title">Minimize Risks</h4>
+                <p class="card-text">
+                  Make data-driven decisions with real-time insights into
+                  borrower health and performance.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <i class="bi bi-lightning-charge text-warning fs-1 mb-3"></i>
+                <h4 class="card-title">Accelerate ROI</h4>
+                <p class="card-text">
+                  Speed up lending processes and improve portfolio performance
+                  with AI-powered insights.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <div class="container text-center">
+        <h2 class="mb-4">Ready to transform your lending operations?</h2>
+        <p class="lead mb-4">
+          Discover how PaySoko's HI-VE AI can optimize your lending process
+        </p>
+        <a href="demo.html" class="btn btn-primary btn-lg px-4 py-2">
+          Request a Demo <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 PaySoko. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript for Filtering -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+            // Add active class to clicked button
+            this.classList.add("active");
+
+            const filterValue = this.getAttribute("data-filter");
+
+            // Show all items if "all" is selected
+            if (filterValue === "all") {
+              portfolioItems.forEach((item) => {
+                item.classList.add("active");
+              });
+            } else {
+              // Hide all items
+              portfolioItems.forEach((item) => {
+                item.classList.remove("active");
+              });
+
+              // Show items with matching category
+              const itemsToShow = document.querySelectorAll(
+                `.portfolio-item[data-category="${filterValue}"]`
+              );
+              itemsToShow.forEach((item) => {
+                item.classList.add("active");
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
