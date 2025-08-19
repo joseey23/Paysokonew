@@ -183,6 +183,25 @@ h6 {
   font-weight: 500;
 }
 
+.card .btn-getstarted {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 15px;
+  padding: 10px 25px;
+  margin: 0 0 0 30px;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-weight: 500;
+  position: absolute;
+  bottom: -10px;
+}
+
+.btn-getstarted:hover,
+.btn-getstarted:focus:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
   color: var(--contrast-color);
