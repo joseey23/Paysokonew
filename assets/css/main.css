@@ -188,12 +188,13 @@ h6 {
   background: var(--accent-color);
   font-size: 15px;
   padding: 10px 25px;
-  /* margin: 0 0 0 30px; */
   border-radius: 8px;
   transition: 0.3s;
   font-weight: 500;
   position: absolute;
   bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 50%;
 }
 
@@ -1531,7 +1532,7 @@ section,
 @media (max-width: 575px) {
   .portfolio .portfolio-filters li {
     font-size: 14px;
-    margin: 0 5px;
+    margin: 0 5px 5px;
   }
 }
 
